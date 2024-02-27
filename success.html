@@ -9,9 +9,41 @@
     <link href="assets/styles/styles.css" rel="stylesheet">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 </head>
-<body>
-<h1>Logged In Successfully</h1>
-<h2 id="username"></h2>
-<img id="profile">
+<body id="successBody">
+<div class="successMidDiv">
+    <img id="profile_pic">
+    <h1 id="LIS">Logged In Successfully</h1>
+    <div id="usernameDiv">
+        <h2>Username:&nbsp;</h2>
+        <h2 id="username"></h2>
+    </div>
+    <div id="emailDiv">
+        <h2>Email:&nbsp;</h2>
+        <h2 id="user_email"></h2>
+    </div>
+</div>
+<script>
+    window.onload = function() {
+        // Get query parameters from URL
+        let urlParams = new URLSearchParams(window.location.search);
+
+        // Retrieve parameter values
+        let name = urlParams.get('name');
+        let email = urlParams.get('email');
+        let image = urlParams.get('image');
+
+        console.log(name);
+        console.log(email);
+        console.log(image);
+
+        updateValues(name,email,image);
+    }
+
+    function updateValues(name,email,image){
+        document.getElementById('username').innerHTML = name;
+        document.getElementById('user_email').innerHTML = email;
+        document.getElementById('profile_pic').src = image;
+    }
+</script>
 </body>
 </html>

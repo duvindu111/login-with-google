@@ -27,8 +27,15 @@ googleLogin.addEventListener('click', function () {
             // IdP data available using getAdditionalUserInfo(result)
 
             console.log(user);
+
+            let name = user.displayName;
+            let email = user.email;
+            let image = user.photoURL;
+
             //redirect
-            window.location.href= "success.html";
+            window.location.href = "success.html?name=" + encodeURIComponent(name) +
+                "&email=" + encodeURIComponent(email) +
+                "&image=" + encodeURIComponent(image);
         }).catch((error) => {
         // Handle Errors here.
         const errorCode = error.code;
