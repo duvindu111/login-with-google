@@ -28,7 +28,7 @@ googleLogin.addEventListener('click', function () {
 
             console.log(user);
             //redirect
-            window.location.href= "assets/pages/success.html"
+            window.location.href= "../../pages/success.html"
         }).catch((error) => {
         // Handle Errors here.
         const errorCode = error.code;
