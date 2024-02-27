@@ -48,6 +48,7 @@ form *{
 }
 #successBody{
     color: white;
+    font-family: "Poppins";
 }
 .successMidDiv{
     position: absolute;
@@ -63,6 +64,7 @@ form *{
 #profile_pic{
     border-radius: 100%;
     margin-bottom: 10px;
+    border: 3px solid white;
 }
 #usernameDiv{
     display: flex;
@@ -76,14 +78,27 @@ form *{
     margin-bottom: 10px;
 }
 
+@media (max-width: 500px){
+    form{
+        background-color: transparent;
+        border: none;
+    }
+    #btnLogin{
+        width: max-content;
+    }
+    .mid{
+        text-align: center;
+    }
+}
+
 @media (max-width: 400px){
     #LIS{
         font-size: 20px;
     }
     #usernameDiv>h2{
-        font-size: 15px !important;
+        font-size: 13px !important;
     }
     #emailDiv>h2{
-        font-size: 15px !important;
+        font-size: 13px !important;
     }
 }
