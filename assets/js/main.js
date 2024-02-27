@@ -27,6 +27,7 @@ googleLogin.addEventListener('click', function () {
             // IdP data available using getAdditionalUserInfo(result)
 
             console.log(user);
+            //redirect
             window.location.href= "../pages/success.html"
         }).catch((error) => {
         // Handle Errors here.
